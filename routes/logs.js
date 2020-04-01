@@ -1,12 +1,7 @@
 const express = require('express');
-
 const router = express.Router();
+const { getLogs } = require('../controllers/logs');
 
-router.get('/', (req, res) => {
-	res.status(200).json({
-		success: true,
-		msg: 'Get all logs'
-	});
-});
+router.route('/').get(getLogs);
 
 module.exports = router;
