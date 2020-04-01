@@ -1,14 +1,20 @@
 {
-  "name": "surf-casters-log",
-  "version": "1.0.0",
-  "description": "an app to to log your fishing trips",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ken Spatta",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+	"name": "surf-casters-log",
+	"version": "1.0.0",
+	"description": "an app to to log your fishing trips",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "NODE_ENV=production node index.js",
+		"dev": "nodemon index.js"
+	},
+	"author": "Ken Spatta",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	}
 }
