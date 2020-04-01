@@ -2,12 +2,18 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 
+// Route Files
+const logs = require('./routes/logs');
+
 dotenv.config({ path: './config/config.env' });
 
 const app = express();
 
 // Log http requests in development
 app.use(morgan('dev'));
+
+// Mount routers
+app.use('/api/v1/logs', logs);
 
 const PORT = process.env.PORT || 5000;
 

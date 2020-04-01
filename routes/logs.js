@@ -8,3 +8,5 @@ router.get('/', (req, res) => {
 		msg: 'Get all logs'
 	});
 });
+
+module.exports = router;
