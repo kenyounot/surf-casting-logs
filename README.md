@@ -1,9 +1,7 @@
-# Surf Casters Log
+# Surf Casting Logs
 
 ## About
 
 ## Install
 
 ## Tech
-
-test
