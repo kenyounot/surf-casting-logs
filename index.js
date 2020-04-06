@@ -1,12 +1,17 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
+const connectDB = require('./config/db');
+
+dotenv.config({ path: './config/config.env' });
+
+// Connect to DB
+connectDB();
 
 // Route Files
 const logs = require('./routes/logs');
 
-dotenv.config({ path: './config/config.env' });
-
+// Set app to express
 const app = express();
 
 // Log http requests in development
