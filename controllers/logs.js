@@ -4,7 +4,7 @@
 exports.getLogs = (req, res) => {
 	res.status(200).json({
 		success: true,
-		msg: 'Get all logs'
+		msg: 'Get all logs',
 	});
 };
 
@@ -12,10 +12,12 @@ exports.getLogs = (req, res) => {
 // @route POST /api/v1/logs
 // @auth Private
 exports.createLog = (req, res) => {
-	res.status(200).json({
-		success: true,
-		msg: 'Create a log'
-	});
+	// res.status(200).json({
+	// 	success: true,
+	// 	data: req.body,
+	// });
+
+	console.log(req.body);
 };
 
 // @desc Get a single log
@@ -24,7 +26,7 @@ exports.createLog = (req, res) => {
 exports.getLog = (req, res) => {
 	res.status(200).json({
 		success: true,
-		msg: `Get log with id of ${req.params.id}`
+		msg: `Get log with id of ${req.params.id}`,
 	});
 };
 
@@ -34,7 +36,7 @@ exports.getLog = (req, res) => {
 exports.updateLog = (req, res) => {
 	res.status(200).json({
 		success: true,
-		msg: `Update log with id of ${req.params.id}`
+		msg: `Update log with id of ${req.params.id}`,
 	});
 };
 
@@ -44,6 +46,6 @@ exports.updateLog = (req, res) => {
 exports.deleteLog = (req, res) => {
 	res.status(200).json({
 		success: true,
-		msg: `Delete log with id of ${req.params.id}`
+		msg: `Delete log with id of ${req.params.id}`,
 	});
 };
