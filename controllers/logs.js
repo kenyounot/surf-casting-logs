@@ -1,3 +1,5 @@
+const Log = require('../models/Log');
+
 // @desc Get all logs
 // @route GET /api/v1/logs
 // @auth Private
@@ -11,13 +13,20 @@ exports.getLogs = (req, res) => {
 // @desc Create a log
 // @route POST /api/v1/logs
 // @auth Private
-exports.createLog = (req, res) => {
-	// res.status(200).json({
-	// 	success: true,
-	// 	data: req.body,
-	// });
+exports.createLog = async (req, res) => {
+	try {
+		const log = await Log.create(req.body);
 
-	console.log(req.body);
+		res.status(201).json({
+			success: true,
+			data: log,
+		});
+	} catch (err) {
+		res.status(400).json({
+			success: false,
+			error: err.message,
+		});
+	}
 };
 
 // @desc Get a single log
